@@ -12,13 +12,13 @@
     <?php if (is_front_page()): ?>
       <section class="home-links clearfix">
         <div class="home-link-wrap">
-          <a href="#" class="home-link">Contact</a>
+          <a href="<?php echo get_page_link(6); ?>" class="home-link">Contact</a>
           <div class="home-link-description">
             Learn how to get in touch with us.
           </div>
         </div>
         <div class="home-link-wrap">
-          <a href="#" class="home-link">Referral Advocacy</a>
+          <a href="<?php echo get_page_link(27); ?>" class="home-link">Referral Advocacy</a>
           <div class="home-link-description">
             We assist solicitors with litigation. Keep the client, lose the headache.
           </div>

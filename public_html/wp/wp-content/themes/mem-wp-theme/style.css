@@ -193,7 +193,7 @@ a:hover {text-decoration: underline;}
 
 body {margin: 20px 0 0;}
 
-.container {width: 1020px; position: relative; overflow: hidden;}
+.container {width: 1020px; position: relative;}
 
 .primary {width: 680px; float: left; padding-bottom: 10px; background-color: #fff; min-height: 420px}
 
@@ -253,6 +253,25 @@ nav li a:hover {background: #fff; color: #23408F; text-decoration: none;}
 
 nav .selected a {background: #23408f; color: #fff;}
 
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  width: 200px;
+  background-color: #23408F;
+  box-shadow: 0px 2px 5px 0px #555;
+}
+.sub-menu .menu-item {
+  float: none;
+}
+.menu-item-has-children {
+  position: relative;
+}
+.menu-item-has-children:hover .sub-menu {
+  display: block;
+}
 .content-header {margin-bottom: 10px;}
 
 
@@ -276,13 +295,17 @@ footer {border-top: 1px solid #999; padding-top: 15px;}
   display: block;
   float: left;
 }
-.header-phone {
+.header-contact {
   float: left;
-  margin-top: 25px;
   margin-left: 106px;
   font-size: 25px;
 }
-
+.header-phone {
+  margin-top: 25px;
+}
+.header-email {
+  margin-top: 15px;
+}
 .emblem {
   margin-right: 20px;
 }
@@ -376,6 +399,12 @@ aside.secondary {
   margin-bottom: 20px;
 }
 
+
+.article-figure img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
 .article-title {
   font-size: 18px;
   width: 80%;

@@ -54,12 +54,14 @@ get_header(); ?>
         <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
           <article class="news-article">
             <header class="article-header">
+              <figure class="article-figure">
+                <?php the_post_thumbnail(); ?>
+              </figure>
               <h3 class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
               <span class="date"><?php the_date('d M Y'); ?></span>
             </header>
             <div class="article-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga id similique praesentium dolor nostrum. Cum animi, nisi quaerat aut aspernatur distinctio cupiditate. Eum quo facilis quia alias minima fugit, nostrum sint hic natus nesciunt odio dolores corporis illo accusantium esse.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, illo!</p>
+              <?php the_content(); ?>
             </div>
           </article>
           <hr class="hr-half">

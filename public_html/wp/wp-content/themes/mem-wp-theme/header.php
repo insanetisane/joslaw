@@ -79,8 +79,11 @@
                 <a class="logo" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
                     <img src="<?php bloginfo('template_url') ?>/img/header.jpg" alt="John O'Sullivan Law" />
                 </a>
-                <div class="header-phone">
+                <div class="header-phone header-contact">
                     <a href="tel:4162525555">416.252.5555</a>
+                </div>
+                <div class="header-email header-contact">
+                    <a href="mailto:jos@johnosullivanlaw.com">jos@johnosullivanlaw.com</a>
                 </div>
             </div>
             <div class="bd header-title">

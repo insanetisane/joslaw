@@ -19,7 +19,7 @@
 
         <div class="unit size1of2 right">
 
-        <span>390 Bay Street, Suite 1402, Toronto, Ontario, Canada M5H 2Y2</span><br>
+        390 Bay Street, Suite 1402, Toronto, Ontario, Canada M5H 2Y2<br>
 
         <a href="mailto:jos@johnosullivanlaw.com">jos@johnosullivanlaw.com</a><br>
 

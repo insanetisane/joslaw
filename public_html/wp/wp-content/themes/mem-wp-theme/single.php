@@ -8,8 +8,8 @@
 get_header(); ?>
 
 <section class="page-main-section clearfix">
-  <?php the_post_thumbnail(); ?>
   <div class="primary">
+    <?php the_post_thumbnail(); ?>
     <h1 class="page-title"><?php the_title(); ?></h1>
   </div>
   <?php get_sidebar(); ?>
