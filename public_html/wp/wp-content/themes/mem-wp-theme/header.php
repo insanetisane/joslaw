@@ -44,7 +44,7 @@
 
 <link href='//fonts.googleapis.com/css?family=Average|Magra:700,400|Neuton:400,700' rel='stylesheet' type='text/css'>
 
-<script src="//johnosullivanlaw.com/js/libs/modernizr-2.5.3.min.js"></script>
+<script src="js/libs/modernizr-2.8.3.min.js"></script>
 
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
