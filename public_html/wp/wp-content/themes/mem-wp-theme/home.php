@@ -7,21 +7,25 @@ get_header(); ?>
 <section class="page-main-section clearfix">
   <div class="primary">
     <?php the_post_thumbnail(); ?>
-    <h1 class="page-title"><?php the_title(); ?></h1>
+    <h1 class="page-title">
+      <?php $blog_page_id = get_option('page_for_posts');
+      echo get_page($blog_page_id)->post_title; ?>
+    </h1>
 
     <section class="news-section padded clearfix">
       <h2 class="h3 news-section-title">Latest Publications</h2>
       <div class="articles">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-          <article class="news-article">
+          <article class="news-article clearfix">
             <header class="article-header">
               <h3 class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
               <span class="date"><?php the_date(); ?></span>
             </header>
             <div class="article-content">
-            <?php the_excerpt(); ?>
+              <?php the_excerpt(); ?>
             </div>
+            <a href="<?php the_permalink(); ?>" class="btn article-more-btn">Read More <i class="fa fa-arrow-right"></i></a>
           </article>
           <hr class="hr-half">
 
@@ -29,7 +33,6 @@ get_header(); ?>
           <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
         <?php endif; ?>
 
-        <a href="#" class="btn article-more-btn">Read More <i class="fa fa-arrow-right"></i></a>
       </div>
     </section>
 
@@ -58,13 +61,13 @@ get_header(); ?>
             <div class="article-content">
               <?php the_content(); ?>
             </div>
+            <a href="#" class="btn article-more-btn">Read More <i class="fa fa-arrow-right"></i></a>
           </article>
           <hr class="hr-half">
         <?php endwhile; ?>
         <!-- end of the loop -->
         <!-- pagination here -->
 
-        <a href="#" class="btn article-more-btn">Read More <i class="fa fa-arrow-right"></i></a>
       </div>
     </section>
 

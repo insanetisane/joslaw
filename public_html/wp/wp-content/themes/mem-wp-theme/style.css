@@ -277,9 +277,9 @@ nav .selected a {background: #23408f; color: #fff;}
 .menu-item-has-children:hover .sub-menu {
   display: block;
 }
-.content-header {margin-bottom: 10px; margin-right: -20px;}
+.content-header {margin-bottom: 10px; }
 .content-header img {
-  max-width: 100%;
+  max-width: calc(100% + 20px);
 }
 
 
@@ -335,11 +335,15 @@ aside.secondary {
 }
 .page-title {
   margin-bottom: 20px;
-  padding: 0;
+  padding: 20px 0 0 20px;
 }
 .entry-content {
   padding: 20px;
 }
+.entry-content .page-title {
+  padding: 0;
+}
+
 
 .widget_better_rss_widget li {
   margin: 0;
