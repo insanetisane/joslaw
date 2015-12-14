@@ -8,7 +8,7 @@ if ( 'content' != $current_layout ) :
           <div class="sidebar-section clearfix">
             <?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
             <?php endif; // end sidebar widget area ?>
-            <a class="btn article-more-btn" target="_blank" href="http://www.slaw.ca/author/osullivan/">Read More ></a>
+            <a class="btn article-more-btn" target="_blank" href="http://www.slaw.ca/author/osullivan/">Read More <i class="fa fa-arrow-right"></i></a>
           </div>
 
           <div class="sidebar-section clearfix">
@@ -41,7 +41,7 @@ if ( 'content' != $current_layout ) :
 
                     <!-- pagination here -->
 
-                    <a href="news" class="btn article-more-btn">Read More ></a>
+                    <a href="news" class="btn article-more-btn">Read More <i class="fa fa-arrow-right"></i></a>
                   </div>
                 </section>
 

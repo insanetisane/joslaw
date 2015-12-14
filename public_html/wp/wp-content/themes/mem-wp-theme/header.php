@@ -43,7 +43,7 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
 <link href='//fonts.googleapis.com/css?family=Average|Magra:700,400|Neuton:400,700' rel='stylesheet' type='text/css'>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <script src="js/libs/modernizr-2.8.3.min.js"></script>
 
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />

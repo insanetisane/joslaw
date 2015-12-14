@@ -12,29 +12,24 @@ get_header(); ?>
     <section class="news-section padded clearfix">
       <h2 class="h3 news-section-title">Latest Publications</h2>
       <div class="articles">
-        <article class="news-article">
-          <header class="article-header">
-            <h3 class="article-title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, libero!</a></h3>
-            <span class="date">10 July 2015</span>
-          </header>
-          <div class="article-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga id similique praesentium dolor nostrum. Cum animi, nisi quaerat aut aspernatur distinctio cupiditate. Eum quo facilis quia alias minima fugit, nostrum sint hic natus nesciunt odio dolores corporis illo accusantium esse.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, illo!</p>
-          </div>
-        </article>
-        <hr class="hr-half">
-        <article class="news-article">
-          <header class="article-header">
-            <h3 class="article-title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, libero!</a></h3>
-            <span class="date">10 July 2015</span>
-          </header>
-          <div class="article-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga id similique praesentium dolor nostrum. Cum animi, nisi quaerat aut aspernatur distinctio cupiditate. Eum quo facilis quia alias minima fugit, nostrum sint hic natus nesciunt odio dolores corporis illo accusantium esse.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, illo!</p>
-          </div>
-        </article>
-        <hr class="hr-half">
-        <a href="#" class="btn article-more-btn">Read More ></a>
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+          <article class="news-article">
+            <header class="article-header">
+              <h3 class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+              <span class="date"><?php the_date(); ?></span>
+            </header>
+            <div class="article-content">
+            <?php the_excerpt(); ?>
+            </div>
+          </article>
+          <hr class="hr-half">
+
+        <?php endwhile; else : ?>
+          <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+        <?php endif; ?>
+
+        <a href="#" class="btn article-more-btn">Read More <i class="fa fa-arrow-right"></i></a>
       </div>
     </section>
 
@@ -67,10 +62,9 @@ get_header(); ?>
           <hr class="hr-half">
         <?php endwhile; ?>
         <!-- end of the loop -->
-
         <!-- pagination here -->
 
-        <a href="#" class="btn article-more-btn">Read More ></a>
+        <a href="#" class="btn article-more-btn">Read More <i class="fa fa-arrow-right"></i></a>
       </div>
     </section>
 
